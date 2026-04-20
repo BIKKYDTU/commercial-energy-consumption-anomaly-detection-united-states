@@ -1,0 +1,128 @@
+{
+  "tests": [
+    {
+      "name": "tests/test_load_data.py::test_load_data_forward_fills_internal_hourly_gaps",
+      "status": "FAILED"
+    },
+    {
+      "name": "tests/test_load_data.py::test_load_data_backfills_leading_na_after_reindex",
+      "status": "FAILED"
+    },
+    {
+      "name": "tests/test_rubric_compliance.py::TestPromptTechStackAndLayout::test_solution_is_single_pipeline_py_at_repo_root",
+      "status": "FAILED"
+    },
+    {
+      "name": "tests/test_rubric_compliance.py::TestPromptTechStackAndLayout::test_python_version_is_3_10_or_higher",
+      "status": "FAILED"
+    },
+    {
+      "name": "tests/test_rubric_compliance.py::TestPromptTechStackAndLayout::test_uses_pandas_2x",
+      "status": "FAILED"
+    },
+    {
+      "name": "tests/test_rubric_compliance.py::TestPromptTechStackAndLayout::test_uses_numpy_1x",
+      "status": "FAILED"
+    },
+    {
+      "name": "tests/test_rubric_compliance.py::TestPromptTechStackAndLayout::test_uses_plotly_5x",
+      "status": "FAILED"
+    },
+    {
+      "name": "tests/test_rubric_compliance.py::TestPromptTechStackAndLayout::test_interactive_html_report_uses_plotly_heatmap",
+      "status": "FAILED"
+    },
+    {
+      "name": "tests/test_run_pipeline.py::TestPromptInterface::test_run_pipeline_is_callable_with_documented_signature",
+      "status": "FAILED"
+    },
+    {
+      "name": "tests/test_run_pipeline.py::TestPromptAnalyticsOutputs::test_returns_dict_with_seven_typed_keys",
+      "status": "FAILED"
+    },
+    {
+      "name": "tests/test_run_pipeline.py::TestPromptAnalyticsOutputs::test_daily_summary_covers_each_calendar_day_in_input",
+      "status": "FAILED"
+    },
+    {
+      "name": "tests/test_run_pipeline.py::TestPromptAnalyticsOutputs::test_monthly_summary_aggregates_calendar_months",
+      "status": "FAILED"
+    },
+    {
+      "name": "tests/test_run_pipeline.py::TestPromptAnalyticsOutputs::test_usage_patterns_has_required_keys_with_correct_values",
+      "status": "FAILED"
+    },
+    {
+      "name": "tests/test_run_pipeline.py::TestPromptAnalyticsOutputs::test_seasonal_trends_has_required_keys_with_correct_values",
+      "status": "FAILED"
+    },
+    {
+      "name": "tests/test_run_pipeline.py::TestPromptAnalyticsOutputs::test_anomalies_zero_variance_stratum_behavior",
+      "status": "FAILED"
+    },
+    {
+      "name": "tests/test_run_pipeline.py::TestPromptAnalyticsOutputs::test_anomalies_zero_variance_weekend_stratum_behavior",
+      "status": "FAILED"
+    },
+    {
+      "name": "tests/test_run_pipeline.py::TestPromptAnalyticsOutputs::test_anomalies_normal_stratum_full_requirements",
+      "status": "FAILED"
+    },
+    {
+      "name": "tests/test_run_pipeline.py::TestPromptAnalyticsOutputs::test_baseline_kwh_matches_set_b_definition",
+      "status": "FAILED"
+    },
+    {
+      "name": "tests/test_run_pipeline.py::TestPromptAnalyticsOutputs::test_projected_next_month_kwh_finite_float",
+      "status": "FAILED"
+    },
+    {
+      "name": "tests/test_run_pipeline.py::TestPromptAnalyticsOutputs::test_projected_next_month_kwh_fallback_no_prior_same_month",
+      "status": "FAILED"
+    },
+    {
+      "name": "tests/test_run_pipeline.py::TestRunPipelineHtmlAndHeatmap::test_writes_nonempty_html_document",
+      "status": "FAILED"
+    },
+    {
+      "name": "tests/test_run_pipeline.py::TestRunPipelineHtmlAndHeatmap::test_heatmap_color_encodes_consumption",
+      "status": "FAILED"
+    },
+    {
+      "name": "tests/test_run_pipeline.py::TestRunPipelineHtmlAndHeatmap::test_heatmap_has_24_hourly_rows_and_finite_z",
+      "status": "FAILED"
+    },
+    {
+      "name": "tests/test_run_pipeline.py::TestRunPipelineHtmlAndHeatmap::test_heatmap_x_axis_one_column_per_calendar_day",
+      "status": "FAILED"
+    },
+    {
+      "name": "tests/test_run_pipeline.py::TestRunPipelineHtmlAndHeatmap::test_html_embeds_plotly_js_inline",
+      "status": "FAILED"
+    },
+    {
+      "name": "tests/test_run_pipeline.py::TestRunPipelineHtmlAndHeatmap::test_html_report_cost_estimate_format_and_value",
+      "status": "FAILED"
+    },
+    {
+      "name": "tests/test_run_pipeline.py::TestRunPipelineHtmlAndHeatmap::test_anomaly_heatmap_uses_red_markings_for_pipeline_flagged_days",
+      "status": "FAILED"
+    },
+    {
+      "name": "tests/test_tech_stack.py::test_python_version_is_3_10_or_newer",
+      "status": "FAILED"
+    },
+    {
+      "name": "tests/test_tech_stack.py::test_pandas_major_version_is_2",
+      "status": "FAILED"
+    },
+    {
+      "name": "tests/test_tech_stack.py::test_numpy_major_version_is_1",
+      "status": "FAILED"
+    },
+    {
+      "name": "tests/test_tech_stack.py::test_plotly_major_version_is_5",
+      "status": "FAILED"
+    }
+  ]
+}

@@ -1,0 +1,314 @@
+[1m============================= test session starts ==============================[0m
+[1mcollecting ... [0mcollected 32 items
+
+tests/test_load_data.py::test_load_data_two_columns_float64_timezone_naive_no_nan [31mFAILED[0m[31m [  3%][0m
+tests/test_load_data.py::test_load_data_forward_fills_internal_hourly_gaps [31mFAILED[0m[31m [  6%][0m
+tests/test_load_data.py::test_load_data_backfills_leading_na_after_reindex [31mFAILED[0m[31m [  9%][0m
+tests/test_rubric_compliance.py::TestPromptTechStackAndLayout::test_solution_is_single_pipeline_py_at_repo_root [31mFAILED[0m[31m [ 12%][0m
+tests/test_rubric_compliance.py::TestPromptTechStackAndLayout::test_python_version_is_3_10_or_higher [31mFAILED[0m[31m [ 15%][0m
+tests/test_rubric_compliance.py::TestPromptTechStackAndLayout::test_uses_pandas_2x [31mFAILED[0m[31m [ 18%][0m
+tests/test_rubric_compliance.py::TestPromptTechStackAndLayout::test_uses_numpy_1x [31mFAILED[0m[31m [ 21%][0m
+tests/test_rubric_compliance.py::TestPromptTechStackAndLayout::test_uses_plotly_5x [31mFAILED[0m[31m [ 25%][0m
+tests/test_rubric_compliance.py::TestPromptTechStackAndLayout::test_interactive_html_report_uses_plotly_heatmap [31mFAILED[0m[31m [ 28%][0m
+tests/test_run_pipeline.py::TestPromptInterface::test_run_pipeline_is_callable_with_documented_signature [31mFAILED[0m[31m [ 31%][0m
+tests/test_run_pipeline.py::TestPromptAnalyticsOutputs::test_returns_dict_with_seven_typed_keys [31mFAILED[0m[31m [ 34%][0m
+tests/test_run_pipeline.py::TestPromptAnalyticsOutputs::test_daily_summary_covers_each_calendar_day_in_input [31mFAILED[0m[31m [ 37%][0m
+tests/test_run_pipeline.py::TestPromptAnalyticsOutputs::test_monthly_summary_aggregates_calendar_months [31mFAILED[0m[31m [ 40%][0m
+tests/test_run_pipeline.py::TestPromptAnalyticsOutputs::test_usage_patterns_has_required_keys_with_correct_values [31mFAILED[0m[31m [ 43%][0m
+tests/test_run_pipeline.py::TestPromptAnalyticsOutputs::test_seasonal_trends_has_required_keys_with_correct_values [31mFAILED[0m[31m [ 46%][0m
+tests/test_run_pipeline.py::TestPromptAnalyticsOutputs::test_anomalies_zero_variance_stratum_behavior [31mFAILED[0m[31m [ 50%][0m
+tests/test_run_pipeline.py::TestPromptAnalyticsOutputs::test_anomalies_zero_variance_weekend_stratum_behavior [31mFAILED[0m[31m [ 53%][0m
+tests/test_run_pipeline.py::TestPromptAnalyticsOutputs::test_anomalies_normal_stratum_full_requirements [31mFAILED[0m[31m [ 56%][0m
+tests/test_run_pipeline.py::TestPromptAnalyticsOutputs::test_baseline_kwh_matches_set_b_definition [31mFAILED[0m[31m [ 59%][0m
+tests/test_run_pipeline.py::TestPromptAnalyticsOutputs::test_projected_next_month_kwh_finite_float [31mFAILED[0m[31m [ 62%][0m
+tests/test_run_pipeline.py::TestPromptAnalyticsOutputs::test_projected_next_month_kwh_fallback_no_prior_same_month [31mFAILED[0m[31m [ 65%][0m
+tests/test_run_pipeline.py::TestRunPipelineHtmlAndHeatmap::test_writes_nonempty_html_document [31mFAILED[0m[31m [ 68%][0m
+tests/test_run_pipeline.py::TestRunPipelineHtmlAndHeatmap::test_heatmap_color_encodes_consumption [31mFAILED[0m[31m [ 71%][0m
+tests/test_run_pipeline.py::TestRunPipelineHtmlAndHeatmap::test_heatmap_has_24_hourly_rows_and_finite_z [31mFAILED[0m[31m [ 75%][0m
+tests/test_run_pipeline.py::TestRunPipelineHtmlAndHeatmap::test_heatmap_x_axis_one_column_per_calendar_day [31mFAILED[0m[31m [ 78%][0m
+tests/test_run_pipeline.py::TestRunPipelineHtmlAndHeatmap::test_html_embeds_plotly_js_inline [31mFAILED[0m[31m [ 81%][0m
+tests/test_run_pipeline.py::TestRunPipelineHtmlAndHeatmap::test_html_report_cost_estimate_format_and_value [31mFAILED[0m[31m [ 84%][0m
+tests/test_run_pipeline.py::TestRunPipelineHtmlAndHeatmap::test_anomaly_heatmap_uses_red_markings_for_pipeline_flagged_days [31mFAILED[0m[31m [ 87%][0m
+tests/test_tech_stack.py::test_python_version_is_3_10_or_newer [31mFAILED[0m[31m    [ 90%][0m
+tests/test_tech_stack.py::test_pandas_major_version_is_2 [31mFAILED[0m[31m          [ 93%][0m
+tests/test_tech_stack.py::test_numpy_major_version_is_1 [31mFAILED[0m[31m           [ 96%][0m
+tests/test_tech_stack.py::test_plotly_major_version_is_5 [31mFAILED[0m[31m          [100%][0m
+
+=================================== FAILURES ===================================
+[31m[1m___________ test_load_data_two_columns_float64_timezone_naive_no_nan ___________[0m
+[1m[31mtests/test_load_data.py[0m:42: in test_load_data_two_columns_float64_timezone_naive_no_nan
+    [0mdf = load_data([96mstr[39;49;00m(path))[90m[39;49;00m
+         ^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mtests/conftest.py[0m:50: in _load_data_missing
+    [0m[94mraise[39;49;00m [96mNotImplementedError[39;49;00m([33m"[39;49;00m[33mpipeline module not available[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+[1m[31mE   NotImplementedError: pipeline module not available[0m
+[31m[1m______________ test_load_data_forward_fills_internal_hourly_gaps _______________[0m
+[1m[31mtests/test_load_data.py[0m:72: in test_load_data_forward_fills_internal_hourly_gaps
+    [0mdf = load_data([96mstr[39;49;00m(path))[90m[39;49;00m
+         ^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mtests/conftest.py[0m:50: in _load_data_missing
+    [0m[94mraise[39;49;00m [96mNotImplementedError[39;49;00m([33m"[39;49;00m[33mpipeline module not available[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+[1m[31mE   NotImplementedError: pipeline module not available[0m
+[31m[1m______________ test_load_data_backfills_leading_na_after_reindex _______________[0m
+[1m[31mtests/test_load_data.py[0m:98: in test_load_data_backfills_leading_na_after_reindex
+    [0mdf = load_data([96mstr[39;49;00m(path))[90m[39;49;00m
+         ^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mtests/conftest.py[0m:50: in _load_data_missing
+    [0m[94mraise[39;49;00m [96mNotImplementedError[39;49;00m([33m"[39;49;00m[33mpipeline module not available[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+[1m[31mE   NotImplementedError: pipeline module not available[0m
+[31m[1m_ TestPromptTechStackAndLayout.test_solution_is_single_pipeline_py_at_repo_root _[0m
+[1m[31mtests/test_rubric_compliance.py[0m:57: in test_solution_is_single_pipeline_py_at_repo_root
+    [0m[94massert[39;49;00m PIPELINE_PATH.is_file(), [33m"[39;49;00m[33mExpected pipeline.py at repository root[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+[1m[31mE   AssertionError: Expected pipeline.py at repository root[0m
+[1m[31mE   assert False[0m
+[1m[31mE    +  where False = is_file()[0m
+[1m[31mE    +    where is_file = PosixPath('/home/ursha/task2/codebase_f/pipeline.py').is_file[0m
+[31m[1m______ TestPromptTechStackAndLayout.test_python_version_is_3_10_or_higher ______[0m
+[1m[31mtests/test_rubric_compliance.py[0m:86: in test_python_version_is_3_10_or_higher
+    [0mrequire_submitted_pipeline()[90m[39;49;00m
+[1m[31mtests/prompt_helpers.py[0m:30: in require_submitted_pipeline
+    [0m[94massert[39;49;00m p.is_file() [95mand[39;49;00m p.stat().st_size > [94m0[39;49;00m, ([90m[39;49;00m
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mE   AssertionError: Expected pipeline.py at PIPELINE_REPO_ROOT (submission root)[0m
+[31m[1m_______________ TestPromptTechStackAndLayout.test_uses_pandas_2x _______________[0m
+[1m[31mtests/test_rubric_compliance.py[0m:91: in test_uses_pandas_2x
+    [0mrequire_submitted_pipeline()[90m[39;49;00m
+[1m[31mtests/prompt_helpers.py[0m:30: in require_submitted_pipeline
+    [0m[94massert[39;49;00m p.is_file() [95mand[39;49;00m p.stat().st_size > [94m0[39;49;00m, ([90m[39;49;00m
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mE   AssertionError: Expected pipeline.py at PIPELINE_REPO_ROOT (submission root)[0m
+[31m[1m_______________ TestPromptTechStackAndLayout.test_uses_numpy_1x ________________[0m
+[1m[31mtests/test_rubric_compliance.py[0m:98: in test_uses_numpy_1x
+    [0mrequire_submitted_pipeline()[90m[39;49;00m
+[1m[31mtests/prompt_helpers.py[0m:30: in require_submitted_pipeline
+    [0m[94massert[39;49;00m p.is_file() [95mand[39;49;00m p.stat().st_size > [94m0[39;49;00m, ([90m[39;49;00m
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mE   AssertionError: Expected pipeline.py at PIPELINE_REPO_ROOT (submission root)[0m
+[31m[1m_______________ TestPromptTechStackAndLayout.test_uses_plotly_5x _______________[0m
+[1m[31mtests/test_rubric_compliance.py[0m:105: in test_uses_plotly_5x
+    [0mrequire_submitted_pipeline()[90m[39;49;00m
+[1m[31mtests/prompt_helpers.py[0m:30: in require_submitted_pipeline
+    [0m[94massert[39;49;00m p.is_file() [95mand[39;49;00m p.stat().st_size > [94m0[39;49;00m, ([90m[39;49;00m
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mE   AssertionError: Expected pipeline.py at PIPELINE_REPO_ROOT (submission root)[0m
+[31m[1m_ TestPromptTechStackAndLayout.test_interactive_html_report_uses_plotly_heatmap _[0m
+[1m[31mtests/test_rubric_compliance.py[0m:122: in test_interactive_html_report_uses_plotly_heatmap
+    [0mrun_pipeline([96mstr[39;49;00m(multi_year_csv), [96mstr[39;49;00m(out), cost_per_kwh=[94m0.1[39;49;00m)[90m[39;49;00m
+[1m[31mtests/conftest.py[0m:53: in _run_pipeline_missing
+    [0m[94mraise[39;49;00m [96mNotImplementedError[39;49;00m([33m"[39;49;00m[33mpipeline module not available[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+[1m[31mE   NotImplementedError: pipeline module not available[0m
+[31m[1m_ TestPromptInterface.test_run_pipeline_is_callable_with_documented_signature __[0m
+[1m[31mtests/test_run_pipeline.py[0m:251: in test_run_pipeline_is_callable_with_documented_signature
+    [0m[94massert[39;49;00m pp.is_file() [95mand[39;49;00m pp.stat().st_size > [94m0[39;49;00m, ([90m[39;49;00m
+[1m[31mE   AssertionError: Expected non-empty pipeline.py at repository root (prompt.md); missing or stub-only baseline must not pass this test.[0m
+[1m[31mE   assert (False)[0m
+[1m[31mE    +  where False = is_file()[0m
+[1m[31mE    +    where is_file = PosixPath('/home/ursha/task2/codebase_f/pipeline.py').is_file[0m
+[31m[1m______ TestPromptAnalyticsOutputs.test_returns_dict_with_seven_typed_keys ______[0m
+[1m[31mtests/test_run_pipeline.py[0m:281: in test_returns_dict_with_seven_typed_keys
+    [0mresult, output_path, _ = multi_year_run()[90m[39;49;00m
+                             ^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mtests/test_run_pipeline.py[0m:233: in _run
+    [0mresult = run_pipeline(multi_year_csv, output_path, cost_per_kwh=cost_per_kwh)[90m[39;49;00m
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mtests/conftest.py[0m:53: in _run_pipeline_missing
+    [0m[94mraise[39;49;00m [96mNotImplementedError[39;49;00m([33m"[39;49;00m[33mpipeline module not available[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+[1m[31mE   NotImplementedError: pipeline module not available[0m
+[31m[1m_ TestPromptAnalyticsOutputs.test_daily_summary_covers_each_calendar_day_in_input _[0m
+[1m[31mtests/test_run_pipeline.py[0m:319: in test_daily_summary_covers_each_calendar_day_in_input
+    [0mresult, _, csv_path = multi_year_run()[90m[39;49;00m
+                          ^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mtests/test_run_pipeline.py[0m:233: in _run
+    [0mresult = run_pipeline(multi_year_csv, output_path, cost_per_kwh=cost_per_kwh)[90m[39;49;00m
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mtests/conftest.py[0m:53: in _run_pipeline_missing
+    [0m[94mraise[39;49;00m [96mNotImplementedError[39;49;00m([33m"[39;49;00m[33mpipeline module not available[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+[1m[31mE   NotImplementedError: pipeline module not available[0m
+[31m[1m__ TestPromptAnalyticsOutputs.test_monthly_summary_aggregates_calendar_months __[0m
+[1m[31mtests/test_run_pipeline.py[0m:408: in test_monthly_summary_aggregates_calendar_months
+    [0mresult, _, csv_path = multi_year_run()[90m[39;49;00m
+                          ^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mtests/test_run_pipeline.py[0m:233: in _run
+    [0mresult = run_pipeline(multi_year_csv, output_path, cost_per_kwh=cost_per_kwh)[90m[39;49;00m
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mtests/conftest.py[0m:53: in _run_pipeline_missing
+    [0m[94mraise[39;49;00m [96mNotImplementedError[39;49;00m([33m"[39;49;00m[33mpipeline module not available[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+[1m[31mE   NotImplementedError: pipeline module not available[0m
+[31m[1m_ TestPromptAnalyticsOutputs.test_usage_patterns_has_required_keys_with_correct_values _[0m
+[1m[31mtests/test_run_pipeline.py[0m:484: in test_usage_patterns_has_required_keys_with_correct_values
+    [0mresult = run_pipeline(business_weekend_pattern_csv, out, cost_per_kwh=[94m0.1[39;49;00m)[90m[39;49;00m
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mtests/conftest.py[0m:53: in _run_pipeline_missing
+    [0m[94mraise[39;49;00m [96mNotImplementedError[39;49;00m([33m"[39;49;00m[33mpipeline module not available[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+[1m[31mE   NotImplementedError: pipeline module not available[0m
+[31m[1m_ TestPromptAnalyticsOutputs.test_seasonal_trends_has_required_keys_with_correct_values _[0m
+[1m[31mtests/test_run_pipeline.py[0m:575: in test_seasonal_trends_has_required_keys_with_correct_values
+    [0mresult = run_pipeline(seasonal_csv, out, cost_per_kwh=[94m0.1[39;49;00m)[90m[39;49;00m
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mtests/conftest.py[0m:53: in _run_pipeline_missing
+    [0m[94mraise[39;49;00m [96mNotImplementedError[39;49;00m([33m"[39;49;00m[33mpipeline module not available[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+[1m[31mE   NotImplementedError: pipeline module not available[0m
+[31m[1m___ TestPromptAnalyticsOutputs.test_anomalies_zero_variance_stratum_behavior ___[0m
+[1m[31mtests/test_run_pipeline.py[0m:665: in test_anomalies_zero_variance_stratum_behavior
+    [0mresult = run_pipeline(csv_path, out, cost_per_kwh=[94m0.1[39;49;00m)[90m[39;49;00m
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mtests/conftest.py[0m:53: in _run_pipeline_missing
+    [0m[94mraise[39;49;00m [96mNotImplementedError[39;49;00m([33m"[39;49;00m[33mpipeline module not available[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+[1m[31mE   NotImplementedError: pipeline module not available[0m
+[31m[1m_ TestPromptAnalyticsOutputs.test_anomalies_zero_variance_weekend_stratum_behavior _[0m
+[1m[31mtests/test_run_pipeline.py[0m:717: in test_anomalies_zero_variance_weekend_stratum_behavior
+    [0mresult = run_pipeline(csv_path, out, cost_per_kwh=[94m0.1[39;49;00m)[90m[39;49;00m
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mtests/conftest.py[0m:53: in _run_pipeline_missing
+    [0m[94mraise[39;49;00m [96mNotImplementedError[39;49;00m([33m"[39;49;00m[33mpipeline module not available[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+[1m[31mE   NotImplementedError: pipeline module not available[0m
+[31m[1m__ TestPromptAnalyticsOutputs.test_anomalies_normal_stratum_full_requirements __[0m
+[1m[31mtests/test_run_pipeline.py[0m:800: in test_anomalies_normal_stratum_full_requirements
+    [0mresult = run_pipeline(csv_path, out, cost_per_kwh=[94m0.1[39;49;00m)[90m[39;49;00m
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mtests/conftest.py[0m:53: in _run_pipeline_missing
+    [0m[94mraise[39;49;00m [96mNotImplementedError[39;49;00m([33m"[39;49;00m[33mpipeline module not available[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+[1m[31mE   NotImplementedError: pipeline module not available[0m
+[31m[1m____ TestPromptAnalyticsOutputs.test_baseline_kwh_matches_set_b_definition _____[0m
+[1m[31mtests/test_run_pipeline.py[0m:929: in test_baseline_kwh_matches_set_b_definition
+    [0mresult = run_pipeline(business_weekend_pattern_csv, out, cost_per_kwh=[94m0.1[39;49;00m)[90m[39;49;00m
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mtests/conftest.py[0m:53: in _run_pipeline_missing
+    [0m[94mraise[39;49;00m [96mNotImplementedError[39;49;00m([33m"[39;49;00m[33mpipeline module not available[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+[1m[31mE   NotImplementedError: pipeline module not available[0m
+[31m[1m____ TestPromptAnalyticsOutputs.test_projected_next_month_kwh_finite_float _____[0m
+[1m[31mtests/test_run_pipeline.py[0m:978: in test_projected_next_month_kwh_finite_float
+    [0mresult = run_pipeline(multi_year_csv, out, cost_per_kwh=[94m0.12[39;49;00m)[90m[39;49;00m
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mtests/conftest.py[0m:53: in _run_pipeline_missing
+    [0m[94mraise[39;49;00m [96mNotImplementedError[39;49;00m([33m"[39;49;00m[33mpipeline module not available[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+[1m[31mE   NotImplementedError: pipeline module not available[0m
+[31m[1m_ TestPromptAnalyticsOutputs.test_projected_next_month_kwh_fallback_no_prior_same_month _[0m
+[1m[31mtests/test_run_pipeline.py[0m:1069: in test_projected_next_month_kwh_fallback_no_prior_same_month
+    [0mresult = run_pipeline(csv_path, out, cost_per_kwh=[94m0.12[39;49;00m)[90m[39;49;00m
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mtests/conftest.py[0m:53: in _run_pipeline_missing
+    [0m[94mraise[39;49;00m [96mNotImplementedError[39;49;00m([33m"[39;49;00m[33mpipeline module not available[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+[1m[31mE   NotImplementedError: pipeline module not available[0m
+[31m[1m_______ TestRunPipelineHtmlAndHeatmap.test_writes_nonempty_html_document _______[0m
+[1m[31mtests/test_run_pipeline.py[0m:1159: in test_writes_nonempty_html_document
+    [0mresult, output_path, _ = multi_year_run()[90m[39;49;00m
+                             ^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mtests/test_run_pipeline.py[0m:233: in _run
+    [0mresult = run_pipeline(multi_year_csv, output_path, cost_per_kwh=cost_per_kwh)[90m[39;49;00m
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mtests/conftest.py[0m:53: in _run_pipeline_missing
+    [0m[94mraise[39;49;00m [96mNotImplementedError[39;49;00m([33m"[39;49;00m[33mpipeline module not available[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+[1m[31mE   NotImplementedError: pipeline module not available[0m
+[31m[1m_____ TestRunPipelineHtmlAndHeatmap.test_heatmap_color_encodes_consumption _____[0m
+[1m[31mtests/test_run_pipeline.py[0m:1262: in test_heatmap_color_encodes_consumption
+    [0mrun_pipeline(anomaly_csv, out, cost_per_kwh=[94m0.12[39;49;00m)[90m[39;49;00m
+[1m[31mtests/conftest.py[0m:53: in _run_pipeline_missing
+    [0m[94mraise[39;49;00m [96mNotImplementedError[39;49;00m([33m"[39;49;00m[33mpipeline module not available[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+[1m[31mE   NotImplementedError: pipeline module not available[0m
+[31m[1m__ TestRunPipelineHtmlAndHeatmap.test_heatmap_has_24_hourly_rows_and_finite_z __[0m
+[1m[31mtests/test_run_pipeline.py[0m:1328: in test_heatmap_has_24_hourly_rows_and_finite_z
+    [0m_, output_path, _ = multi_year_run()[90m[39;49;00m
+                        ^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mtests/test_run_pipeline.py[0m:233: in _run
+    [0mresult = run_pipeline(multi_year_csv, output_path, cost_per_kwh=cost_per_kwh)[90m[39;49;00m
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mtests/conftest.py[0m:53: in _run_pipeline_missing
+    [0m[94mraise[39;49;00m [96mNotImplementedError[39;49;00m([33m"[39;49;00m[33mpipeline module not available[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+[1m[31mE   NotImplementedError: pipeline module not available[0m
+[31m[1m_ TestRunPipelineHtmlAndHeatmap.test_heatmap_x_axis_one_column_per_calendar_day _[0m
+[1m[31mtests/test_run_pipeline.py[0m:1373: in test_heatmap_x_axis_one_column_per_calendar_day
+    [0m_, output_path, _ = multi_year_run()[90m[39;49;00m
+                        ^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mtests/test_run_pipeline.py[0m:233: in _run
+    [0mresult = run_pipeline(multi_year_csv, output_path, cost_per_kwh=cost_per_kwh)[90m[39;49;00m
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mtests/conftest.py[0m:53: in _run_pipeline_missing
+    [0m[94mraise[39;49;00m [96mNotImplementedError[39;49;00m([33m"[39;49;00m[33mpipeline module not available[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+[1m[31mE   NotImplementedError: pipeline module not available[0m
+[31m[1m_______ TestRunPipelineHtmlAndHeatmap.test_html_embeds_plotly_js_inline ________[0m
+[1m[31mtests/test_run_pipeline.py[0m:1417: in test_html_embeds_plotly_js_inline
+    [0m_, output_path, _ = multi_year_run()[90m[39;49;00m
+                        ^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mtests/test_run_pipeline.py[0m:233: in _run
+    [0mresult = run_pipeline(multi_year_csv, output_path, cost_per_kwh=cost_per_kwh)[90m[39;49;00m
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mtests/conftest.py[0m:53: in _run_pipeline_missing
+    [0m[94mraise[39;49;00m [96mNotImplementedError[39;49;00m([33m"[39;49;00m[33mpipeline module not available[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+[1m[31mE   NotImplementedError: pipeline module not available[0m
+[31m[1m_ TestRunPipelineHtmlAndHeatmap.test_html_report_cost_estimate_format_and_value _[0m
+[1m[31mtests/test_run_pipeline.py[0m:1437: in test_html_report_cost_estimate_format_and_value
+    [0mhourly = load_data(multi_year_csv)[90m[39;49;00m
+             ^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mtests/conftest.py[0m:50: in _load_data_missing
+    [0m[94mraise[39;49;00m [96mNotImplementedError[39;49;00m([33m"[39;49;00m[33mpipeline module not available[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+[1m[31mE   NotImplementedError: pipeline module not available[0m
+[31m[1m_ TestRunPipelineHtmlAndHeatmap.test_anomaly_heatmap_uses_red_markings_for_pipeline_flagged_days _[0m
+[1m[31mtests/test_run_pipeline.py[0m:1517: in test_anomaly_heatmap_uses_red_markings_for_pipeline_flagged_days
+    [0mresult = run_pipeline(zscore_outlier_heatmap_csv, output_path, cost_per_kwh=[94m0.10[39;49;00m)[90m[39;49;00m
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mtests/conftest.py[0m:53: in _run_pipeline_missing
+    [0m[94mraise[39;49;00m [96mNotImplementedError[39;49;00m([33m"[39;49;00m[33mpipeline module not available[39;49;00m[33m"[39;49;00m)[90m[39;49;00m
+[1m[31mE   NotImplementedError: pipeline module not available[0m
+[31m[1m_____________________ test_python_version_is_3_10_or_newer _____________________[0m
+[1m[31mtests/test_tech_stack.py[0m:21: in test_python_version_is_3_10_or_newer
+    [0mrequire_submitted_pipeline()[90m[39;49;00m
+[1m[31mtests/prompt_helpers.py[0m:30: in require_submitted_pipeline
+    [0m[94massert[39;49;00m p.is_file() [95mand[39;49;00m p.stat().st_size > [94m0[39;49;00m, ([90m[39;49;00m
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mE   AssertionError: Expected pipeline.py at PIPELINE_REPO_ROOT (submission root)[0m
+[31m[1m________________________ test_pandas_major_version_is_2 ________________________[0m
+[1m[31mtests/test_tech_stack.py[0m:29: in test_pandas_major_version_is_2
+    [0mrequire_submitted_pipeline()[90m[39;49;00m
+[1m[31mtests/prompt_helpers.py[0m:30: in require_submitted_pipeline
+    [0m[94massert[39;49;00m p.is_file() [95mand[39;49;00m p.stat().st_size > [94m0[39;49;00m, ([90m[39;49;00m
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mE   AssertionError: Expected pipeline.py at PIPELINE_REPO_ROOT (submission root)[0m
+[31m[1m________________________ test_numpy_major_version_is_1 _________________________[0m
+[1m[31mtests/test_tech_stack.py[0m:40: in test_numpy_major_version_is_1
+    [0mrequire_submitted_pipeline()[90m[39;49;00m
+[1m[31mtests/prompt_helpers.py[0m:30: in require_submitted_pipeline
+    [0m[94massert[39;49;00m p.is_file() [95mand[39;49;00m p.stat().st_size > [94m0[39;49;00m, ([90m[39;49;00m
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mE   AssertionError: Expected pipeline.py at PIPELINE_REPO_ROOT (submission root)[0m
+[31m[1m________________________ test_plotly_major_version_is_5 ________________________[0m
+[1m[31mtests/test_tech_stack.py[0m:51: in test_plotly_major_version_is_5
+    [0mrequire_submitted_pipeline()[90m[39;49;00m
+[1m[31mtests/prompt_helpers.py[0m:30: in require_submitted_pipeline
+    [0m[94massert[39;49;00m p.is_file() [95mand[39;49;00m p.stat().st_size > [94m0[39;49;00m, ([90m[39;49;00m
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+[1m[31mE   AssertionError: Expected pipeline.py at PIPELINE_REPO_ROOT (submission root)[0m
+[36m[1m=========================== short test summary info ============================[0m
+[31mFAILED[0m tests/test_load_data.py::[1mtest_load_data_two_columns_float64_timezone_naive_no_nan[0m - NotImplementedError: pipeline module not available
+[31mFAILED[0m tests/test_load_data.py::[1mtest_load_data_forward_fills_internal_hourly_gaps[0m - NotImplementedError: pipeline module not available
+[31mFAILED[0m tests/test_load_data.py::[1mtest_load_data_backfills_leading_na_after_reindex[0m - NotImplementedError: pipeline module not available
+[31mFAILED[0m tests/test_rubric_compliance.py::[1mTestPromptTechStackAndLayout::test_solution_is_single_pipeline_py_at_repo_root[0m - AssertionError: Expected pipeline.py at repository root
+[31mFAILED[0m tests/test_rubric_compliance.py::[1mTestPromptTechStackAndLayout::test_python_version_is_3_10_or_higher[0m - AssertionError: Expected pipeline.py at PIPELINE_REPO_ROOT (submission root)
+[31mFAILED[0m tests/test_rubric_compliance.py::[1mTestPromptTechStackAndLayout::test_uses_pandas_2x[0m - AssertionError: Expected pipeline.py at PIPELINE_REPO_ROOT (submission root)
+[31mFAILED[0m tests/test_rubric_compliance.py::[1mTestPromptTechStackAndLayout::test_uses_numpy_1x[0m - AssertionError: Expected pipeline.py at PIPELINE_REPO_ROOT (submission root)
+[31mFAILED[0m tests/test_rubric_compliance.py::[1mTestPromptTechStackAndLayout::test_uses_plotly_5x[0m - AssertionError: Expected pipeline.py at PIPELINE_REPO_ROOT (submission root)
+[31mFAILED[0m tests/test_rubric_compliance.py::[1mTestPromptTechStackAndLayout::test_interactive_html_report_uses_plotly_heatmap[0m - NotImplementedError: pipeline module not available
+[31mFAILED[0m tests/test_run_pipeline.py::[1mTestPromptInterface::test_run_pipeline_is_callable_with_documented_signature[0m - AssertionError: Expected non-empty pipeline.py at repository root (prompt.m...
+[31mFAILED[0m tests/test_run_pipeline.py::[1mTestPromptAnalyticsOutputs::test_returns_dict_with_seven_typed_keys[0m - NotImplementedError: pipeline module not available
+[31mFAILED[0m tests/test_run_pipeline.py::[1mTestPromptAnalyticsOutputs::test_daily_summary_covers_each_calendar_day_in_input[0m - NotImplementedError: pipeline module not available
+[31mFAILED[0m tests/test_run_pipeline.py::[1mTestPromptAnalyticsOutputs::test_monthly_summary_aggregates_calendar_months[0m - NotImplementedError: pipeline module not available
+[31mFAILED[0m tests/test_run_pipeline.py::[1mTestPromptAnalyticsOutputs::test_usage_patterns_has_required_keys_with_correct_values[0m - NotImplementedError: pipeline module not available
+[31mFAILED[0m tests/test_run_pipeline.py::[1mTestPromptAnalyticsOutputs::test_seasonal_trends_has_required_keys_with_correct_values[0m - NotImplementedError: pipeline module not available
+[31mFAILED[0m tests/test_run_pipeline.py::[1mTestPromptAnalyticsOutputs::test_anomalies_zero_variance_stratum_behavior[0m - NotImplementedError: pipeline module not available
+[31mFAILED[0m tests/test_run_pipeline.py::[1mTestPromptAnalyticsOutputs::test_anomalies_zero_variance_weekend_stratum_behavior[0m - NotImplementedError: pipeline module not available
+[31mFAILED[0m tests/test_run_pipeline.py::[1mTestPromptAnalyticsOutputs::test_anomalies_normal_stratum_full_requirements[0m - NotImplementedError: pipeline module not available
+[31mFAILED[0m tests/test_run_pipeline.py::[1mTestPromptAnalyticsOutputs::test_baseline_kwh_matches_set_b_definition[0m - NotImplementedError: pipeline module not available
+[31mFAILED[0m tests/test_run_pipeline.py::[1mTestPromptAnalyticsOutputs::test_projected_next_month_kwh_finite_float[0m - NotImplementedError: pipeline module not available
+[31mFAILED[0m tests/test_run_pipeline.py::[1mTestPromptAnalyticsOutputs::test_projected_next_month_kwh_fallback_no_prior_same_month[0m - NotImplementedError: pipeline module not available
+[31mFAILED[0m tests/test_run_pipeline.py::[1mTestRunPipelineHtmlAndHeatmap::test_writes_nonempty_html_document[0m - NotImplementedError: pipeline module not available
+[31mFAILED[0m tests/test_run_pipeline.py::[1mTestRunPipelineHtmlAndHeatmap::test_heatmap_color_encodes_consumption[0m - NotImplementedError: pipeline module not available
+[31mFAILED[0m tests/test_run_pipeline.py::[1mTestRunPipelineHtmlAndHeatmap::test_heatmap_has_24_hourly_rows_and_finite_z[0m - NotImplementedError: pipeline module not available
+[31mFAILED[0m tests/test_run_pipeline.py::[1mTestRunPipelineHtmlAndHeatmap::test_heatmap_x_axis_one_column_per_calendar_day[0m - NotImplementedError: pipeline module not available
+[31mFAILED[0m tests/test_run_pipeline.py::[1mTestRunPipelineHtmlAndHeatmap::test_html_embeds_plotly_js_inline[0m - NotImplementedError: pipeline module not available
+[31mFAILED[0m tests/test_run_pipeline.py::[1mTestRunPipelineHtmlAndHeatmap::test_html_report_cost_estimate_format_and_value[0m - NotImplementedError: pipeline module not available
+[31mFAILED[0m tests/test_run_pipeline.py::[1mTestRunPipelineHtmlAndHeatmap::test_anomaly_heatmap_uses_red_markings_for_pipeline_flagged_days[0m - NotImplementedError: pipeline module not available
+[31mFAILED[0m tests/test_tech_stack.py::[1mtest_python_version_is_3_10_or_newer[0m - AssertionError: Expected pipeline.py at PIPELINE_REPO_ROOT (submission root)
+[31mFAILED[0m tests/test_tech_stack.py::[1mtest_pandas_major_version_is_2[0m - AssertionError: Expected pipeline.py at PIPELINE_REPO_ROOT (submission root)
+[31mFAILED[0m tests/test_tech_stack.py::[1mtest_numpy_major_version_is_1[0m - AssertionError: Expected pipeline.py at PIPELINE_REPO_ROOT (submission root)
+[31mFAILED[0m tests/test_tech_stack.py::[1mtest_plotly_major_version_is_5[0m - AssertionError: Expected pipeline.py at PIPELINE_REPO_ROOT (submission root)
+[31m============================== [31m[1m32 failed[0m[31m in 2.17s[0m[31m ==============================[0m
